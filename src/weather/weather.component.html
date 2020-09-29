@@ -30,7 +30,7 @@
 
      <div class="card-body bg-primary">
        
-         <h4>{{this.weatherData?.main.temp}} °C / <span style="font-size:16px">{{this.weatherData?.main.feels_like}} °C</span></h4>
+         <h1>{{this.weatherData?.main.temp}} °C / <span style="font-size:16px">{{this.weatherData?.main.feels_like}} °C</span></h1>
          
          
        
@@ -38,7 +38,9 @@
 
        <img src="http://openweathermap.org/img/w/{{this.weatherData?.weather[0].icon}}.png">
          <h6 class="description">{{this.weatherData?.weather[0].description}}</h6>
-         <!-- <h6 class="humidity">humid : {{this.weatherData?.main.humidity}}%</h6> -->
+         <h6 class="humidity">humid : {{this.weatherData?.main.humidity}}%</h6>
+         <h6 class="speed">Speed : {{this.weatherData?.wind.speed}} KMPH</h6>
+
         
        
      </div>
