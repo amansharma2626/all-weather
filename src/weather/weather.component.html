@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="parent">
+    <div>
+      <h3 class="text-center">Search for Weather:</h3>
+      <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        id="weatherLocation"
+        aria-describedby="weatherLocation"
+        placeholder="Please input a Location"
+        formControlName="location"
+      />
+     </div>
+     <div class="text-center"> 
+      <button type="submit" class="btn btn-success btn-md">
+        Search for the weather</button>
+     </div>
+   </form> 
+    
+    
+    </div>
+  </div>
+
+  <div class="card" [hidden] = "displayCard">
+    <div class="card-header text-center ">
+      <h2>{{this.weatherData?.name}} , {{this.weatherData?.sys.country}}</h2>
+    </div>
+
+     <div class="card-body">
+       <div class="box up">
+         <h4>{{this.weatherData?.main.temp}} C</h4>
+         <span><strong>Feels Like:</strong></span><br>
+         <h6>{{this.weatherData?.main.feels_like}}</h6>
+       </div>
+       <div class="box down">
+
+       <img src="http://openweathermap.org/img/w/{{this.weatherData?.weather[0].icon}}.png">
+         <h6 class="description">{{this.weatherData?.weather[0].description}}</h6>
+         <!-- <h6 class="humidity">humid : {{this.weatherData?.main.humidity}}%</h6> -->
+        
+       </div>
+     </div>
+  </div>
+</div>
