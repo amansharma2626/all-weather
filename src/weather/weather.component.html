@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid h-100">
   <div class="parent">
     <div>
       <h3 class="text-center">Search for Weather:</h3>
@@ -15,7 +15,7 @@
      </div>
      <div class="text-center"> 
       <button type="submit" class="btn btn-success btn-md">
-        Search for the weather</button>
+        Search</button>
      </div>
    </form> 
     
@@ -24,11 +24,11 @@
   </div>
 
   <div class="card text-center" [hidden] = "displayCard">
-    <div class="card-header bg-warning ">
+    <div class="card-header ">
       <h2>{{this.weatherData?.name}} , {{this.weatherData?.sys.country}}</h2>
     </div>
 
-     <div class="card-body bg-primary">
+     <div class="card-body">
        
          <h1>{{this.weatherData?.main.temp}} °C / <span style="font-size:16px">{{this.weatherData?.main.feels_like}} °C</span></h1>
          

@@ -1,12 +1,13 @@
 *{
             box-sizing: border-box;
         }
-        .container{
-          height: 100vh;
-          background-image: url(https://i.pinimg.com/originals/fe/ae/94/feae940d14bc958141af60d09ac02ba4.gif);
+        
+        .container-fluid{
+          height: 100%;
+          
           
         }
-        .container{
+        .container-fluid{
           display: grid;
           place-items: center;
           padding-top: 10px;
@@ -44,7 +45,7 @@
         }
         .card-header{
          
-          color: #fff;
+          color: #111;
 
           height:50px;
         }
@@ -56,6 +57,7 @@
          
        }
        .card:hover{
+         transform: scale(1.1,1.1);
           box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.2);
        }
         
